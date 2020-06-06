@@ -1,3 +1,5 @@
+autoreconf and autoconf if the BOOST checking occurs error.
+
 rm ./config.log
 rm ./config.status
 rm Makefile
