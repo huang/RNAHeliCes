@@ -16,7 +16,7 @@ Quickstart
      - ./src/libs/libRNA.a contains all Vienna package routines, this may be system dependent. If so, please reload this from Vienna RNA Package.
 3. Type './src/RNAHeliCes ./examples/collosoma_slrna.seq' to run an example.
 4. Type './src/HiPath -h' to get help for calculating energy barriers of an energy landscape.
-   Type './src/HiPath -f ./examples/alternating_rna.faa -t 1 -P ./src/librna/vienna/rna_turner1999.par' to run an example.
+   Type './src/HiPath -f examples/switches_4.faa -k 40 -P ./librna/vienna/rna_turner1999.par' to run an example.
 5. Type './src/HiTed -h' to get help for calculating minimum Hishape based Tree edit distance.
    Type './src/HiTed ./examples/riboswitches.fas -t 1 -r 1' to run an example.
 6. See ./HiKinetics/README for HiKinetics.
