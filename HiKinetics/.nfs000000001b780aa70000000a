@@ -1,0 +1,6 @@
+infile=rw7.seq, outfile=rw7.slo
+Processing sequence:GCAGAACAAUUCAAUAUGUAUUCGUUUAACCACUAGGGGUGUCCUUCAUAAGGGCUGAGAUAAAAGUGUGACUUUUAGACCCUCAUAACUUGAACAGGUUCAGACCUGCGUAGGGAAGUGGAGCGGUAUUUGUGUUAUUUUACUAUGCCAAUUCCAAACCACUUUUCCUUGCGGGAAAGUGGUUU
+The algorithm has predicted 189 putative stacks.
+The minimum free energy stack configurations is 
+((((..............................((((..((((((...)))))).....(((((((...)))))))..))))......(((((....)))))..))))....((((.(((...((((............))))...))).))))(((((((((((((....)))))))))))))	-47.7
+Enumerating all possible local optimal stack configurations within -26.24 (kcal/mol) of the minimum free energy.

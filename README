@@ -1,0 +1,27 @@
+RNAHeliCes
+Copyright (C) 2011-14 Jiabin Huang, Bjoern Voss.
+Send comments/bug reports to: J.Huang <jiabin.huang@biologie.uni-freiburg.de>.
+Updates: http://www.cyanolab.de/software/RNAHeliCes.htm
+
+
+Quickstart
+------------
+1. Read deps and install the dependent compilers and packages
+2. Type
+     ./configure
+     make
+     make install
+   to configure, make and install RNAHeliCes, HiPath and HiTed
+   Notes:
+     - If there are any linking problems after installing, please check if /usr/local/lib is contained in the environmental variable LD_LIBRARY_PATH. 
+     - ./src/libs/libRNA.a contains all Vienna package routines, this may be system dependent. If so, please reload this from Vienna RNA Package.
+3. Type './src/RNAHeliCes ./examples/collosoma_slrna.seq' to run an example.
+4. Type './src/HiPath -h' to get help for calculating energy barriers of an energy landscape.
+   Type './src/HiPath -f ./examples/alternating_rna.faa -t 1 -P ./src/librna/vienna/rna_turner1999.par' to run an example.
+5. Type './src/HiTed -h' to get help for calculating minimum Hishape based Tree edit distance.
+   Type './src/HiTed ./examples/riboswitches.fas -t 1 -r 1' to run an example.
+6. See ./HiKinetics/README for HiKinetics.
+
+See 
+    "INSTALL"        for detailed installation instructions, and
+    "COPYING"        for disclaimer and copyright.

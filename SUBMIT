@@ -1,0 +1,10 @@
+rm ./config.log
+rm ./config.status
+rm Makefile
+rm src/librna/Makefile
+rm src/rtlib/Makefile
+rm src/comp/Makefile
+rm src/libs/Makefile
+rm src/Makefile
+rm examples/Makefile
+rm src/config.h

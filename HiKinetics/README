@@ -1,0 +1,51 @@
+HiKinetics is a program for analyzing RNA-kinetics based on folding space abstraction.
+
+PLATFORM:
+	Ubuntu 12.4 or other Linux OS
+
+COMPILER:
+	GCC 4.5.1
+
+INSTALLATION:
+	scripts
+
+DEPENDENCIES:
+	- Treekin-0.3.1_hi (attached in this package)
+		Treekin-0.3.1_hi depends on
+		- Gengetopt (http://www.gnu.org/software/gengetopt/gengetopt.html)
+		- BLAS and LAPACK libraries (in Ubuntu, try to install them with 'sudo apt-get install libblas-dev libatlas-dev liblapack-dev')
+	- RNAHeliCes
+        - ruby >= 1.8.7
+        - perl >= perl 5, version 14, subversion 2 (v5.14.2) 
+
+USAGE: ./HiKinetics.rb -i [infile] -o [outfile rootname] -k kbest -t hishape_type -p initial_population -s
+	-i, --input FILE                 Read input from specified filename
+	-o, --output STRING              Specify root name for output
+	-k, --kbest [HISHAPE NUMBER]     Choosing the [HISHAPE NUMBER] best hishapes for folding kinetics
+	-t, --type [HISHAPE TYPE]        Specify abstraction type of the best hishapes for folding kinetics
+	-p, --population [HISHAPE]       Set initial population of state [HISHAPE] for folding kinetics
+	-s, --sn                         Restrict the folding space to strictly negative structure
+
+Examples:
+	Example (1): You can use the following command to analyse folding kinetics based on the best hishapes in abstraction type 2 plus the open chain [_].
+		./HiKinetics.rb -i Input/xbix.seq -o Output/xbix -k 10 -t 2
+		cd Output
+		gnuplot xbix.plt
+		okular xbix.ps
+		
+	Example (2): If you want to restrict the folding space to strictly negative structure
+		./HiKinetics.rb -i Input/xbix.seq -o Output/xbix_SN -k 10 -t 2 -s
+		cd Output
+		gnuplot xbix_SN.plt
+		okular xbix_SN.ps
+
+	Example (3): If you want to set a specific hishape other than [_] as initial population
+		./HiKinetics.rb -i Input/xbix.seq -o Output/xbix_SN_P -k 10 -t 2 -s -p [7.5,15.5]
+		cd Output
+		gnuplot xbix_SN_P.plt
+		okular xbix_SN_P.ps
+
+        Other examples:
+                 ./HiKinetics.rb -i Input/spliced_leader.seq -o Output/spliced_leader -k 100 -t 4
+                 ./HiKinetics.rb -i Input/spliced_leader.seq -o Output/spliced_leader_SN -k 100 -t 4 -s
+                 ./HiKinetics.rb -i Input/c_di_GMP_riboswitch.seq -o Output/c_di_GMP_riboswitch_SN_P -k 100 -t 4 -s -p [25.5]
