@@ -1,7 +1,6 @@
 RNAHeliCes
-Copyright (C) 2011-14 Jiabin Huang, Bjoern Voss.
-Send comments/bug reports to: J.Huang <jiabin.huang@biologie.uni-freiburg.de>.
-Updates: http://www.cyanolab.de/software/RNAHeliCes.htm
+Copyright (C) 2011-20 Jiabin Huang, Bjoern Voss.
+Send comments/bug reports to: J. Huang <j.huang@uke.de>.
 
 
 Quickstart
@@ -25,3 +24,10 @@ Quickstart
 See 
     "INSTALL"        for detailed installation instructions, and
     "COPYING"        for disclaimer and copyright.
+    
+ 
+Citations:
+Analysing RNA-kinetics based on folding space abstraction, February 2014 BMC Bioinformatics 15(1):60, DOI: 10.1186/1471-2105-15-60
+Abstract folding space analysis based on helices, October 2012 RNA 18(12), DOI: 10.1261/rna.033548.112
+RNAHeliCes – Folding space analysis based on position aware structure abstraction, September 2011, Conference: Proceedings of the German Conference on Bioinformatics 2011 (GCB 2011)At: RT--31
+
