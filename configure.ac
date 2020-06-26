@@ -226,8 +226,8 @@ echo "| CXX:                            $CXX"
 echo "| CXXFLAGS:                       $CXXFLAGS"
 echo "| LDFLAGS:                        $LDFLAGS"
 ##==== method 1 ====##
-#echo "| BOOST_CFLAGS:                   $BOOST_CFLAGS"
-#echo "| BOOST_LIBS:                     $BOOST_LIBS"
+echo "| BOOST_CFLAGS:                   $BOOST_CFLAGS"
+echo "| BOOST_LIBS:                     $BOOST_LIBS"
 ##==== method 3 ====##
 echo "| BOOST_CPPFLAGS:                 $BOOST_CPPFLAGS"
 echo "| BOOST_DATE_TIME_LDFLAGS:        $BOOST_DATE_TIME_LDFLAGS"
