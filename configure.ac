@@ -147,21 +147,7 @@ echo "o--------------------------------------------"
 echo "| Checking for C++ Libraries BOOST"
 echo "o--------------------------------------------"
 # minimal reqired version of the BOOST library
-#BOOST_REQUIRED_VERSION=1.36.1
-
-##==== method 3 ====##
-BOOST_REQUIRE([1.36])
-
-BOOST_DEFUN([Bind],[BOOST_FIND_HEADER([boost/accumulators/accumulators.hpp])])  #BOOST_ACCUMULATORS
-BOOST_FORMAT
-BOOST_DEFUN([Integer],[BOOST_FIND_HEADER([boost/cstdint.hpp])])                 #BOOST_INTEGER
-BOOST_DEFUN([Lexical_Cast],[BOOST_FIND_HEADER([boost/lexical_cast.hpp])])       #BOOST_LEXICAL_CAST
-BOOST_DEFUN([Pool],[BOOST_FIND_HEADER([boost/pool/pool.hpp])])                  #BOOST_POOL
-BOOST_DEFUN([Smart_Ptr],[BOOST_FIND_HEADER([boost/intrusive_ptr.hpp])])         #BOOST_SMARTPTR
-
-# ([mt-d])
-BOOST_DATE_TIME
-BOOST_PROGRAM_OPTIONS
+BOOST_REQUIRED_VERSION=1.36.1
 
 ## TODO: if it fails above, it will be added with the option --with-boost 
 
@@ -180,19 +166,19 @@ BOOST_PROGRAM_OPTIONS
 #    PKG_CHECK_MODULES([BOOST], [boost >= $BOOST_REQUIRED_VERSION])
 #else
   #### Get Boost library and include locations
-#  AC_ARG_WITH([boost-include-path],
-#    [AS_HELP_STRING([--with-boost-include-path],
-#      [location of the Boost headers, defaults to /usr/include])],
-#    [BOOST_CFLAGS="-I$withval"],
-#    [BOOST_CFLAGS='-I/usr/include'])
-#  AC_SUBST([BOOST_CFLAGS])
+  AC_ARG_WITH([boost-include-path],
+    [AS_HELP_STRING([--with-boost-include-path],
+      [location of the Boost headers, defaults to /usr/include])],
+    [BOOST_CFLAGS="-I$withval"],
+    [BOOST_CFLAGS='-I/usr/include'])
+  AC_SUBST([BOOST_CFLAGS])
 
-#  AC_ARG_WITH([boost-lib-path],
-#    [AS_HELP_STRING([--with-boost-lib-path], [location of the Boost libraries])],
-#    [BOOST_LIBS="-L$withval -l/usr/lib64 -l/usr/lib"],
-#    [BOOST_LIBS='-l/usr/lib64 -l/usr/lib'])
-#  AC_SUBST([BOOST_LIBS])
-#fi
+  AC_ARG_WITH([boost-lib-path],
+    [AS_HELP_STRING([--with-boost-lib-path], [location of the Boost libraries])],
+    [BOOST_LIBS="-L$withval"],
+    [BOOST_LIBS='-L/usr/lib64 -l/usr/lib'])
+  AC_SUBST([BOOST_LIBS])
+fi
 
 ##==== method 2 ====##
 #### Search for specified function in specified libraries
@@ -204,11 +190,28 @@ BOOST_PROGRAM_OPTIONS
 #### ==> corresponding point in Makefile.am: #RNABarrier_LDFLAGS = @LDFLAGS@
 #### reference page: http://www.velocityreviews.com/forums/t441986-autoconf-and-shared-library.html
 
+###==== method 3 ====##
+#BOOST_REQUIRE([1.36])
+
+#BOOST_DEFUN([Bind],[BOOST_FIND_HEADER([boost/accumulators/accumulators.hpp])])  #BOOST_ACCUMULATORS
+#BOOST_FORMAT
+#BOOST_DEFUN([Integer],[BOOST_FIND_HEADER([boost/cstdint.hpp])])                 #BOOST_INTEGER
+#BOOST_DEFUN([Lexical_Cast],[BOOST_FIND_HEADER([boost/lexical_cast.hpp])])       #BOOST_LEXICAL_CAST
+#BOOST_DEFUN([Pool],[BOOST_FIND_HEADER([boost/pool/pool.hpp])])                  #BOOST_POOL
+#BOOST_DEFUN([Smart_Ptr],[BOOST_FIND_HEADER([boost/intrusive_ptr.hpp])])         #BOOST_SMARTPTR
+
+## ([mt-d])
+#BOOST_DATE_TIME
+#BOOST_PROGRAM_OPTIONS
+
+
+
 # error ABORT if on of the libraries was not found
 if test "$DEPENDENCYNOTFOUND" = "1"; then
     AC_MSG_NOTICE()
     AC_MSG_ERROR(library not found! Try './configure --help'.)
 fi
+
 
 
 echo "o------------------------------------------------------------"
