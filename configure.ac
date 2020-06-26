@@ -178,7 +178,7 @@ BOOST_REQUIRED_VERSION=1.36.1
     [BOOST_LIBS="-L$withval"],
     [BOOST_LIBS='-L/usr/lib64 -l/usr/lib'])
   AC_SUBST([BOOST_LIBS])
-fi
+#fi
 
 ##==== method 2 ====##
 #### Search for specified function in specified libraries
