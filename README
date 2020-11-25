@@ -5,7 +5,16 @@ Send comments/bug reports to: J. Huang <j.huang@uke.de>.
 
 Quickstart
 ------------
-1. Read deps and install the dependent compilers and packages
+1. Install boost
+#install boost without root access
+#https://programmer.ink/think/how-to-compile-and-install-boost-libraries-on-linux.html
+#under conda-env cc_env  # gcc5.4
+#NEED python2.7: downgrade the python from 3.8 --> 2.7
+conda install python=2.7
+./bootstrap.sh --with-libraries=all /home/jhuang/anaconda3/envs/cc_env/bin/x86_64-conda_cos6-linux-gnu-gcc
+#./bootstrap.sh --with-libraries=date_time,program_options --with-toolset=gcc
+./b2 install --prefix=/home/jhuang/boost_1_58_installed    #--with-toolset=/home/jhuang/anaconda3/envs/cc_env/bin/gcc
+#ldconfig  # requires the root permission!
 2. Type
      ./configure --with-boost-include-path="/home/jhuang/boost_1_58_installed/include" --with-boost-lib-path="/home/jhuang/boost_1_58_installed/lib" CFLAGS='-g -O2 -fno-stack-protector' CPPFLAGS='-std=c++98 -I/home/jhuang/boost_1_58_installed/include -DNDEBUG -D_FORTIFY_SOURCE=2 -O2' CXXFLAGS='-std=c++98 -g -O2 -w -fno-stack-protector'
      make
