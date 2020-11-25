@@ -7,7 +7,7 @@ Quickstart
 ------------
 1. Read deps and install the dependent compilers and packages
 2. Type
-     ./configure --with-boost-include-path="/home/jhuang/boost_1_58_installed/include" --with-boost-lib-path="/home/jhuang/boost_1_58_installed/lib" CFLAGS='-g -O2 -fno-stack-protector' CPPFLAGS='-I/home/jhuang/boost_1_58_installed/include -DNDEBUG -D_FORTIFY_SOURCE=2 -O2' CXXFLAGS='-std=c++98 -g -O2 -w -fno-stack-protector'
+     ./configure --with-boost-include-path="/home/jhuang/boost_1_58_installed/include" --with-boost-lib-path="/home/jhuang/boost_1_58_installed/lib" CFLAGS='-g -O2 -fno-stack-protector' CPPFLAGS='-std=c++98 -I/home/jhuang/boost_1_58_installed/include -DNDEBUG -D_FORTIFY_SOURCE=2 -O2' CXXFLAGS='-std=c++98 -g -O2 -w -fno-stack-protector'
      make
      make install
    to configure, make and install RNAHeliCes, HiPath and HiTed
