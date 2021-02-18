@@ -49,5 +49,7 @@ See "INSTALL"        for detailed installation instructions, and
     
 ## Citations
   [1] Huang, J., & Voß, B. (2011, September). RNAHeliCes—Folding Space Analysis Based on Position Aware Structure Abstraction. In German Conference on Bioinformatics, Weihenstephan, Germany (Vol. 79).
+  
   [2] Huang, J., Backofen, R., & Voß, B. (2012). Abstract folding space analysis based on helices. RNA, 18(12), 2135-2147.
+  
   [3] Huang, J., & Voß, B. (2014). Analysing RNA-kinetics based on folding space abstraction. BMC bioinformatics, 15(1), 60.
