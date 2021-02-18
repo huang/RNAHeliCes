@@ -6,16 +6,19 @@ Send comments/bug reports to: J. Huang <j.huang@uke.de>.
 
 
 ## Dependencies
-1. (Optional) if without SUPER privilege, install libboost locally
+(Optional) if without SUPER privilege, install libboost locally
+ 
 #install boost without root access
 #https://programmer.ink/think/how-to-compile-and-install-boost-libraries-on-linux.html
 #under conda-env cc_env  # gcc5.4
 #NEED python2.7: downgrade the python from 3.8 --> 2.7
+```sh
 conda install python=2.7
 ./bootstrap.sh --with-libraries=all /home/jhuang/anaconda3/envs/cc_env/bin/x86_64-conda_cos6-linux-gnu-gcc
 #./bootstrap.sh --with-libraries=date_time,program_options --with-toolset=gcc
 ./b2 install --prefix=/home/jhuang/boost_1_58_installed    #--with-toolset=/home/jhuang/anaconda3/envs/cc_env/bin/gcc
 #ldconfig  # requires the root permission!
+```
 
 ## Installation
 ```sh
@@ -48,5 +51,7 @@ See "INSTALL"        for detailed installation instructions, and
     
 ## Citations
 [1] Huang, J., & Voß, B. (2011, September). RNAHeliCes—Folding Space Analysis Based on Position Aware Structure Abstraction. In German Conference on Bioinformatics, Weihenstephan, Germany (Vol. 79).
+
 [2] Huang, J., Backofen, R., & Voß, B. (2012). Abstract folding space analysis based on helices. RNA, 18(12), 2135-2147.
+
 [3] Huang, J., & Voß, B. (2014). Analysing RNA-kinetics based on folding space abstraction. BMC bioinformatics, 15(1), 60.
