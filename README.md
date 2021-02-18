@@ -29,13 +29,15 @@ sudo make install
 ```
    Notes:
      - If there are any linking problems after installing, please check if /usr/local/lib is contained in the environmental variable LD_LIBRARY_PATH. 
+     
      - ./src/libs/libRNA.a contains all Vienna package routines, this may be system dependent. If so, please reload this from Vienna RNA Package.
+     
      - If without SUPER privilege, use 
      ./configure --with-boost-include-path="/home/jhuang/boost_1_58_installed/include" --with-boost-lib-path="/home/jhuang/boost_1_58_installed/lib" CFLAGS='-g -O2 -fno-stack-protector' CPPFLAGS='-std=c++98 -I/home/jhuang/boost_1_58_installed/include -DNDEBUG -D_FORTIFY_SOURCE=2 -O2' CXXFLAGS='-std=c++98 -g -O2 -w -fno-stack-protector'
      
 ## Test run
 ```sh
-RNAHeliCes examples/collosoma_slrna.seq'  #run an example
+RNAHeliCes examples/collosoma_slrna.seq   #run an example
 HiPath -h                                 #get help for calculating energy barriers of an energy landscape
 HiPath -f examples/switches_4.faa -k 40 -P ./librna/vienna/rna_turner1999.par  #run an example
 HiTed -h                                  #get help for calculating minimum Hishape based Tree edit distance
