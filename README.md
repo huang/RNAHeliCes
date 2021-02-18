@@ -1,5 +1,6 @@
 # RNAHeliCes and HiKinetics
 Abstract folding space analysis based on helices and RNA-kinetics based on folding space abstraction
+
 Copyright (C) 2011-20 Jiabin Huang, Björn Voss.
 Send comments/bug reports to: J. Huang <j.huang@uke.de>.
 
