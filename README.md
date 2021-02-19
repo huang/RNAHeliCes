@@ -20,6 +20,7 @@ conda deactivate
 conda create --name gcc5 --clone gcc6
 conda remove --name gcc6 --all
 conda activate gcc5
+#TODO: install cc_env as hamm
 
 conda install python=2.7
 ./bootstrap.sh --with-libraries=all /your_path/anaconda3/envs/cc_env/bin/x86_64-conda_cos6-linux-gnu-gcc
