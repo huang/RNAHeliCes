@@ -16,7 +16,11 @@ Send comments/bug reports to: J. Huang <j.huang@uke.de>.
 conda install python=2.7
 ./bootstrap.sh --with-libraries=all /your_path/anaconda3/envs/cc_env/bin/x86_64-conda_cos6-linux-gnu-gcc
 #./bootstrap.sh --with-libraries=date_time,program_options --with-toolset=gcc
-./b2 install --prefix=/your_path/boost_1_58_installed    #--with-toolset=/your_path/anaconda3/envs/cc_env/bin/gcc
+#./bootstrap.sh --with-libraries=all --with-toolset=gcc
+#https://www.ibm.com/developerworks/library/i-building-boost-libraries-using-xlcpp-toolset-trs/index.html
+#./b2 install cxxflags="-qnoxlcompatmacros" cflags="-qnoxlcompatmacros" --prefix=$BOOST_ INSTALL --build-dir=$BOOST_BUILD -j8 -l1200 toolset=xlcpp variant=release target-os=linux -s OS=LINUX -d2 -a
+./b2 install cxxflags="-std=c++98" -j12 --prefix=/home/jhuang/Tools/boost_1_58_installed
+#./b2 install --prefix=/your_path/boost_1_58_installed    #--with-toolset=/your_path/anaconda3/envs/cc_env/bin/gcc
 #ldconfig  # requires the root permission!
 ```
 
