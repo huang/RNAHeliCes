@@ -13,6 +13,14 @@ Send comments/bug reports to: J. Huang <j.huang@uke.de>.
 #under conda-env cc_env  # gcc5.4
 #NEED python2.7: downgrade the python from 3.8 --> 2.7
 ```sh
+conda create --name gcc6 python=2.7
+conda activate gcc6
+conda install gxx_linux-64
+conda deactivate
+conda create --name gcc5 --clone gcc6
+conda remove --name gcc6 --all
+conda activate gcc5
+
 conda install python=2.7
 ./bootstrap.sh --with-libraries=all /your_path/anaconda3/envs/cc_env/bin/x86_64-conda_cos6-linux-gnu-gcc
 #./bootstrap.sh --with-libraries=date_time,program_options --with-toolset=gcc
