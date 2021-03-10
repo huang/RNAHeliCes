@@ -65,4 +65,6 @@ See "INSTALL"        for detailed installation instructions, and
   
   [2] Huang, J., Backofen, R., & Voß, B. (2012). Abstract folding space analysis based on helices. RNA, 18(12), 2135-2147.
   
-  [3] Huang, J., & Voß, B. (2014). Analysing RNA-kinetics based on folding space abstraction. BMC bioinformatics, 15(1), 60.
+  [3] Huang, J., & Voß, B. (2012, September). Reducing the search space in RNA helix based folding. European Conference on Computational Biology 2012. European Conference on Computational Biology (ECCB) 2012.
+  
+  [4] Huang, J., & Voß, B. (2014). Analysing RNA-kinetics based on folding space abstraction. BMC bioinformatics, 15(1), 60.
