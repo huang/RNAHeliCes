@@ -31,9 +31,9 @@ Notes:
      
 ## Test run
 ```sh
-RNAHeliCes examples/collosoma_slrna.seq   #abstract folding space analysis based on helices
-HiPath -f examples/switches_4.faa -k 40 -P ./librna/vienna/rna_turner1999.par  #calculating energy barriers of an energy landscape
-HiTed examples/riboswitches.fas -t 1 -r 1 #calculating minimum Hishape based Tree edit distance
+RNAHeliCes examples/collosoma_slrna.seq
+HiPath -f examples/switches_4.faa -k 40 -P ./librna/vienna/rna_turner1999.par
+HiTed examples/riboswitches.fas -t 1 -r 1
 ```
 
 ## HiKinetics
