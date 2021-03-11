@@ -4,34 +4,17 @@ Abstract folding space analysis based on helices and RNA-kinetics based on foldi
 Copyright (C) 2011-20 Jiabin Huang, Björn Voss.
 Send comments/bug reports to: J. Huang <j.huang@uke.de>.
 
-
 ## Dependencies
-(Optional) if without SUPER privilege, install libboost locally
- 
-#install boost without root access
-#https://programmer.ink/think/how-to-compile-and-install-boost-libraries-on-linux.html
-#under conda-env cc_env  # gcc5.4
-#NEED python2.7: downgrade the python from 3.8 --> 2.7
-```sh
-conda create --name gcc6 python=2.7
-conda activate gcc6
-conda install gxx_linux-64
-conda deactivate
-conda create --name gcc5 --clone gcc6
-conda remove --name gcc6 --all
-conda activate gcc5
-#TODO: install cc_env as hamm
+RNAliHiKinetics needs RNAliHelices and RNAliHipath whose installation is described below. Additional dependencies are:
 
-conda install python=2.7
-./bootstrap.sh --with-libraries=all /your_path/anaconda3/envs/cc_env/bin/x86_64-conda_cos6-linux-gnu-gcc
-#./bootstrap.sh --with-libraries=date_time,program_options --with-toolset=gcc
-#./bootstrap.sh --with-libraries=all --with-toolset=gcc
-#https://www.ibm.com/developerworks/library/i-building-boost-libraries-using-xlcpp-toolset-trs/index.html
-#./b2 install cxxflags="-qnoxlcompatmacros" cflags="-qnoxlcompatmacros" --prefix=$BOOST_ INSTALL --build-dir=$BOOST_BUILD -j8 -l1200 toolset=xlcpp variant=release target-os=linux -s OS=LINUX -d2 -a
-./b2 install cxxflags="-std=c++98" -j12 --prefix=/home/jhuang/Tools/boost_1_58_installed
-#./b2 install --prefix=/your_path/boost_1_58_installed    #--with-toolset=/your_path/anaconda3/envs/cc_env/bin/gcc
-#ldconfig  # requires the root permission!
-```
+compile time:
+* C++ compiler (for example GCC g++)
+* C compiler (for example GCC)
+* GNU make >= 3.81
+
+compile time and runtime:
+* Boost Libraries (>1.58): program_options, date_time
+* LAPACK 
 
 ## Installation
 ```sh
@@ -55,10 +38,6 @@ HiTed examples/riboswitches.fas -t 1 -r 1 #calculating minimum Hishape based Tre
 
 ## HiKinetics
 See ./HiKinetics/README for HiKinetics.
-
-## INSTALL and COPYING
-See "INSTALL"        for detailed installation instructions, and
-    "COPYING"        for disclaimer and copyright.
     
 ## Citations
   [1] Huang, J., & Voß, B. (2011, September). RNAHeliCes—Folding Space Analysis Based on Position Aware Structure Abstraction. In German Conference on Bioinformatics, Weihenstephan, Germany (Vol. 79).
