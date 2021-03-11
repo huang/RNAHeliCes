@@ -93,7 +93,7 @@ RNAHeliCes_CPPFLAGS = $(BOOST_CPPFLAGS) $(AM_CPPFLAGS)
 # -L./librna
 RNAHeliCes_LDFLAGS = $(BOOST_DATE_TIME_LDFLAGS) $(BOOST_PROGRAM_OPTIONS_LDFLAGS)
 # -lrna
-RNAHeliCes_LDADD = $(BOOST_DATE_TIME_LIBS) $(BOOST_PROGRAM_OPTIONS_LIBS) librna/librna.la rtlib/rtlib.la comp/comp.la
+RNAHeliCes_LDADD = $(BOOST_DATE_TIME_LIBS) $(BOOST_PROGRAM_OPTIONS_LIBS) librna/librna.la rtlib/rtlib.la comp/comp.la -lboost_program_options
 
 
 
@@ -117,7 +117,7 @@ HiPath_SOURCES = hipath.cc hited_util.hh hited_util.cc mfe_answer.hh \
 HiPath_CPPFLAGS = $(BOOST_CPPFLAGS) -I$(srcdir)/rtlib -I$(srcdir)/librna
 HiPath_LDFLAGS = $(BOOST_DATE_TIME_LDFLAGS) $(BOOST_PROGRAM_OPTIONS_LDFLAGS)
 # $(srcdir)/libs/libRNA.a because of BFS     -L/home/jhuang/gapc/lib  -lrna
-HiPath_LDADD = $(BOOST_DATE_TIME_LIBS) $(BOOST_PROGRAM_OPTIONS_LIBS) $(srcdir)/libs/libRNA.a librna/librna.la rtlib/rtlib.la comp/comp.la -lm
+HiPath_LDADD = $(BOOST_DATE_TIME_LIBS) $(BOOST_PROGRAM_OPTIONS_LIBS) $(srcdir)/libs/libRNA.a librna/librna.la rtlib/rtlib.la comp/comp.la -lm -lboost_program_options
 
 
 
@@ -136,7 +136,7 @@ HiPath_LDADD = $(BOOST_DATE_TIME_LIBS) $(BOOST_PROGRAM_OPTIONS_LIBS) $(srcdir)/l
 HiTed_SOURCES = hited_util.hh hited_util.cc hited.cc
 HiTed_CPPFLAGS = $(BOOST_CPPFLAGS) -I$(srcdir)/comp
 HiTed_LDFLAGS = $(BOOST_DATE_TIME_LDFLAGS) $(BOOST_PROGRAM_OPTIONS_LDFLAGS)
-HiTed_LDADD = $(BOOST_DATE_TIME_LIBS) $(BOOST_PROGRAM_OPTIONS_LIBS) comp/comp.la
+HiTed_LDADD = $(BOOST_DATE_TIME_LIBS) $(BOOST_PROGRAM_OPTIONS_LIBS) comp/comp.la -lboost_program_options
 
 
 
