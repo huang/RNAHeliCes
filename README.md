@@ -26,8 +26,7 @@ sudo make install
 Notes:
   - If there are any linking problems after installing, please add '/usr/local/lib' to LD_LIBRARY_PATH.
 ```sh
-LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
-export LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
 ```
   - ./src/libs/libRNA.a contains all Vienna package routines, this may be system dependent. If so, please reload this from Vienna RNA Package.
   - If without SUPER privilege, use 
