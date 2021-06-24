@@ -41,16 +41,16 @@ CScoreScheme::CScoreScheme()
 	assert(rc>=0);
     */
 
-    float fB2iValue = 3.0f;
-    float fH2iValue = 8.0f;
-    float fH2bValue = 8.0f;
-    float fM2iValue = 8.0f;
-    float fM2bValue = 8.0f;
-    float fM2hValue = 8.0f;
-    float fIndel2iValue = 5.0f;
-    float fIndel2bValue = 5.0f;
-    float fIndel2hValue = 100.0f;
-    float fIndel2mValue = 75.0f;    
+    float fB2iValue = 10000.0f; //3.0f;
+    float fH2iValue = 10000.0f; //8.0f;
+    float fH2bValue = 10000.0f; //8.0f;
+    float fM2iValue = 10000.0f; //8.0f;
+    float fM2bValue = 10000.0f; //8.0f;
+    float fM2hValue = 10000.0f; //8.0f;
+    float fIndel2iValue = 1.0f; //5.0f;
+    float fIndel2bValue = 1.0f; //5.0f;
+    float fIndel2hValue = 5.0f; //100.0f;
+    float fIndel2mValue = 2.0f;  //75.0f;    
     if (ini.LoadFile("ScoreScheme.ini")>=0 || ini.LoadFile("../ScoreScheme.ini")>=0)
     {
 	// GETTING SECTIONS AND KEYS
