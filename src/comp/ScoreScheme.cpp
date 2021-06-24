@@ -50,7 +50,7 @@ CScoreScheme::CScoreScheme()
     float fIndel2iValue = 1.0f; //5.0f;
     float fIndel2bValue = 1.0f; //5.0f;
     float fIndel2hValue = 5.0f; //100.0f;
-    float fIndel2mValue = 2.0f;  //75.0f;    
+    float fIndel2mValue = 4.0f;  //75.0f;    
     if (ini.LoadFile("ScoreScheme.ini")>=0 || ini.LoadFile("../ScoreScheme.ini")>=0)
     {
 	// GETTING SECTIONS AND KEYS
