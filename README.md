@@ -24,7 +24,11 @@ make
 sudo make install
 ```
 Notes:
-  - If there are any linking problems after installing, please check if /usr/local/lib is contained in the environmental variable LD_LIBRARY_PATH. 
+  - If there are any linking problems after installing, please add '/usr/local/lib' to LD_LIBRARY_PATH.
+```sh
+LD_LIBRARY_PATH=/usr/local/lib
+export LD_LIBRARY_PATH
+```
   - ./src/libs/libRNA.a contains all Vienna package routines, this may be system dependent. If so, please reload this from Vienna RNA Package.
   - If without SUPER privilege, use 
   ./configure --with-boost-include-path="/your_path/boost_1_58_installed/include" --with-boost-lib-path="/your_path/boost_1_58_installed/lib" CFLAGS='-g -O2 -fno-stack-protector' CPPFLAGS='-std=c++98 -I/your_path/boost_1_58_installed/include -DNDEBUG -D_FORTIFY_SOURCE=2 -O2' CXXFLAGS='-std=c++98 -g -O2 -w -fno-stack-protector'
