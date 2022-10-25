@@ -13,7 +13,7 @@ compile time:
 * GNU make >= 3.81
 
 compile time and runtime:
-* Boost Libraries (>1.58): program_options, date_time
+* Boost Libraries (>1.58): program_options, date_time (apt install libboost-all-dev)
 * LAPACK 
 
 ## Installation
