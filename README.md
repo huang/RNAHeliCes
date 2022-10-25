@@ -19,6 +19,7 @@ compile time and runtime:
 ## Installation
 ```sh
 git clone https://github.com/huang/RNAHeliCes
+autoreconf -f -i
 ./configure CFLAGS="-fno-stack-protector" CPPFLAGS="-std=c++98" CXXFLAGS="-std=c++98 -fno-stack-protector"
 make
 sudo make install
