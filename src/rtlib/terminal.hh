@@ -164,14 +164,14 @@ inline bool EMPTY(Basic_Sequence<alphabet, pos_type> &seq, T i, T j)
 }
 
 // deprecated
-template<typename alphabet, typename pos_type, typename T>
-inline String STRING(Basic_Sequence<alphabet, pos_type> &seq, T i, T j)
-{
-  assert(i < j);
-  assert(0);
-  // use ROPE
-  return "";
-}
+//template<typename alphabet, typename pos_type, typename T>
+//inline String STRING(Basic_Sequence<alphabet, pos_type> &seq, T i, T j)
+//{
+//  assert(i < j);
+//  assert(0);
+//  // use ROPE
+//  return "";
+//}
 
 template<typename alphabet, typename pos_type, typename T>
 inline Rope ROPE(Basic_Sequence<alphabet, pos_type> &seq, T i, T j)
